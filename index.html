@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>檢討點題</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <h1>檢討點題</h1>
+    <p class="sub">想聽哪幾題的講解，匿名點一下就好。</p>
+  </header>
+
+  <section class="panel" style="margin-top:16px">
+    <div id="wait" class="card">
+      <div class="card-head">
+        <h2 id="wait-title">正在連線…</h2>
+        <p class="meta" id="wait-text"></p>
+      </div>
+    </div>
+
+    <div id="exam" class="panel" hidden>
+      <div class="card">
+        <div class="card-head">
+          <h2>這次想聽哪幾題的講解？</h2>
+          <p class="meta" id="exam-meta"></p>
+          <p class="meta">點題號選取，再點一次取消。</p>
+        </div>
+        <button class="allgood" id="all-good" type="button" aria-pressed="false">我都會了，沒有要問的題目</button>
+        <div class="groups" id="groups"></div>
+      </div>
+      <p class="anon">匿名作答。老師只看得到每一題有幾個人選，看不到是誰選的。</p>
+    </div>
+  </section>
+</div>
+
+<div class="submit-bar" id="submit-bar" hidden>
+  <div class="submit-in">
+    <div class="submit-info" aria-live="polite">
+      <strong id="picked">0 題想問</strong>
+      <span class="meta" id="submit-state"></span>
+    </div>
+    <button class="primary" id="submit-btn" type="button">送出</button>
+  </div>
+</div>
+
+<script src="/student.js"></script>
+</body>
+</html>
